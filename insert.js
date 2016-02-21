@@ -7,7 +7,7 @@
 
 // 从无序区的第一个元素开始和它前面有序区的元素进行比较，如果比前面的元素小，那么前面的元素向后移动，否则就将此元素插入到相应的位置。
 
-// demo1
+// demo1 test
 function insertSort(arr){
   let i;
   let j;
