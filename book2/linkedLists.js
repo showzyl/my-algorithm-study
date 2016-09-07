@@ -29,8 +29,19 @@ class LinkedList {
     //console.log(this.head);
     this.length++; //update size of list
   }
+  toString(){
+    let current = this.head,
+      string = '';
+
+    while (current) {
+      string = current.element;
+      current = current.next;
+    }
+    return string;
+  }
   print(){
-    console.log(this.head, this.length);
+    console.log(this.toString());
+    //console.log(this.head, this.length);
   }
 }
 
