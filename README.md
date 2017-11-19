@@ -50,7 +50,6 @@ function bubbleSort(arr) {
 > 思路是找到最小的放第一位，第二小的第二位，依次类推
 
 ```
-
 function selectSort(arr) {
 	let minIndex
 	for(let i=0;i<arr.length-1;i++){
@@ -71,6 +70,22 @@ function selectSort(arr) {
 
 - 插入排序
 > 
+```
+function insert(arr) {
+  let j
+  let temp
+  for (let i = 1; i < arr.length; i++) {
+    j = i
+    temp = arr[i]
+    while (j > 0 && arr[j - 1] > temp) {
+      arr[j] = arr[j - 1]
+      j--
+    } 
+    arr[j] = temp
+  }
+  return arr
+}
+```
 
 - 归并排序 O(nlog^n)
 > 递归把数组分为两个子数组，一直递归到数组中只有一个元素，然后调用函数把两个子数组排序，最后两数组合并
