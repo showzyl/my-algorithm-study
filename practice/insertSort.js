@@ -13,6 +13,7 @@
  * 插入排序
  * @param arr
  */
+
 function insertSort(arr) {
   for (let i = 1; i < arr.length; i++) {
     insert(arr, i, arr[i])
@@ -30,7 +31,7 @@ function insert(arr, i, x) {
   arr[p + 1] = x
 }
 
-console.log(`insertSort([]): `, insertSort([2, -10, -1, 5], 1))
+console.log(`insertSort([]): `, insertSort([2, -10, -1, 5]))
 
 
 
