@@ -22,16 +22,23 @@ function insertSort(arr) {
 }
 
 function insert(arr, i, x) {
-  let p = i - 1 // 定义一个指针
+  // p 指针指向下一个需要比较的元素
+  // p + 1 指向空位
+  let p = i - 1
   while (p >= 0 && arr[p] > x) {
     arr[p + 1] = arr[p]
     p--
   }
-  console.log(`p: `, p)
+  // console.log(`p: `, p)
+  // console.log(`x: `, x)
   arr[p + 1] = x
 }
 
-console.log(`insertSort([]): `, insertSort([2, -10, -1, 5]))
+module.exports = {
+  insertSort
+}
+
+// console.log(`insertSort: `, insertSort([2, -10, -1, 5]))
 
 
 
