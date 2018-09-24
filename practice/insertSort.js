@@ -29,17 +29,14 @@ function insert(arr, i, x) {
     arr[p + 1] = arr[p]
     p--
   }
-  // console.log(`p: `, p)
-  // console.log(`x: `, x)
   arr[p + 1] = x
 }
 
-module.exports = {
-  insertSort
-}
+console.log(`insertSort: `, insertSort([2, -10, -1, -11]))
 
-// console.log(`insertSort: `, insertSort([2, -10, -1, 5]))
-
+// module.exports = {
+//   insertSort
+// }
 
 
 

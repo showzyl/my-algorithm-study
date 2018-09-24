@@ -13,6 +13,8 @@ function bucketSort(A, k, S) {
   // 放入桶中
   for (let i = 0; i < A.length; i++) {
     const index = ~~(A[i] / S)
+    // const index = parseInt(A[i] / S)
+    console.log(`index: `, index)
     buckets[index].push(A[i])
   }
 
