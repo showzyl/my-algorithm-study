@@ -33,16 +33,17 @@ AVL树/红黑树
 - 冒泡排序 O(n²)
 
 ```
+
 function bubbleSort(arr) {
-	for(let i=0;i<arr.length;i++){
-		for(let j=0;j<arr.length;j++){
-			if(arr[j] > arr[i]){
-				let tmp = arr[i]
-				arr[i] = arr[j]
-				arr[j] = tmp
-			}
-		}
-	}
+  for(let i=0;i<arr.length;i++){
+    for(let j=0;j<arr.length;j++){
+      if(arr[j] > arr[i]){
+        let tmp = arr[i]
+        arr[i] = arr[j]
+        arr[j] = tmp
+      }
+    }
+  }
 }
 ```
 
@@ -51,20 +52,20 @@ function bubbleSort(arr) {
 
 ```
 function selectSort(arr) {
-	let minIndex
-	for(let i=0;i<arr.length-1;i++){
-		minIndex = i
-		for(let j=i;j<arr.length;j++){
-			if(arr[minIndex] > arr[j]){
-				minIndex = j
-			}
-		}
-		if(i !== minIndex){
-			let tmp = arr[i]
-			arr[i] = arr[minIndex]
-			arr[minIndex] = tmp
-		}
-	}
+  let minIndex
+  for(let i=0;i<arr.length-1;i++){
+    minIndex = i
+    for(let j=i;j<arr.length;j++){
+      if(arr[minIndex] > arr[j]){
+        minIndex = j
+      }
+    }
+    if(i !== minIndex){
+      let tmp = arr[i]
+      arr[i] = arr[minIndex]
+      arr[minIndex] = tmp
+    }
+  }
 }
 ```
 
@@ -95,8 +96,53 @@ function insert(arr) {
 
 
 
+### 递归如何处理问题
+```
+if(问题足够简单){
+  直接解决
+}else{
+  将问题拆解成和原问题有相同结构的更小问题
+  解决每个这样的更小问题
+  将这些最小问题的解合并
+  返回整个结果
+}
+```
+
+### 决策树
+
+```
+`枚举问题`可以转化为`决策问题`
+if(所有决策都完成){
+    返回结果
+}
+根据当前状态算出所有可能的决策
+递归调用这些决策
+收集递归的结果，返回
+```
+
+### 回溯算法
+``` 
+function backTracking() {
+   if(到达终点) 返回路径
+   找到所有没有走过的选择
+   递归前往每个选择
+}
+```
 
 
+```
+// 冒泡排序
+// 插入排序
+// 二分查找
+
+// 快速排序
+// 合并排序
+// 桶排序
+// 基数排序
+// 计数排序
+// 斐波那契数列
+// 组合
+```
 
 
 
