@@ -1,4 +1,11 @@
 
+
+// function backTracking() {
+//   if(到达终点) 返回路径
+//   找到所有没有走过的选择
+//   递归前往每个选择
+// }
+
 const maze = [
   [0, 1, 0, 0, 0, 0],
   [0, 1, 0, 1, 1, 0],
@@ -8,6 +15,14 @@ const maze = [
   [2, 1, 0, 0, 0, 0]
 ]
 
+/**
+ * 老鼠在迷宫
+ * @param maze 迷宫矩阵
+ * @param pos 当前位置
+ * @param path 路径
+ * @param transverse 到过的地方记录
+ * @returns {*}
+ */
 function ratInMaze(
   maze,
   pos = [0, 0],
