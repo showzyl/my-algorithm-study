@@ -12,6 +12,7 @@ class Queue {
       throw 'Queue Overflow'
     }
     this.data[this.p++] = item
+    this.size++
     if (this.p === this.max) {
       this.p = 0
     }
@@ -22,6 +23,7 @@ class Queue {
       throw 'Queue Underflow'
     }
     const item = this.data[this.q++]
+    this.size--
     if (this.q === this.max) {
       this.q = 0
     }
@@ -38,9 +40,13 @@ queue.enqueue(6)
 console.log(`queue: `, queue)
 queue.dequeue()
 console.log(`queue: `, queue)
+queue.enqueue(5)
+console.log(`queue: `, queue)
+queue.dequeue()
+queue.dequeue()
+queue.dequeue()
 
-
-
+console.log(`queue: `, queue)
 
 
 
