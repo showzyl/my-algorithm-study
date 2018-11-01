@@ -32,11 +32,12 @@ function radixSort(A) {
     // 下一个位置
     m *= 10
   }
+  console.log(`buckets: `, buckets)
+  return A
 }
 
 const A = [10, 200, 13, 12, 7, 88, 91, 24]
-radixSort(A)
-console.log(`A: `, A)
+console.log(`radixSort: `, A)
 
 
 
