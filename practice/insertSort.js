@@ -32,11 +32,11 @@ function insert(arr, i, x) {
   arr[p + 1] = x
 }
 
-console.log(`insertSort: `, insertSort([2, -10, -1, -11]))
+// console.log(`insertSort: `, insertSort([2, -10, -1, -11]))
 
-// module.exports = {
-//   insertSort
-// }
+module.exports = {
+  insertSort
+}
 
 
 
