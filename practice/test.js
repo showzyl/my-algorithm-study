@@ -1094,28 +1094,28 @@ function solveHanoiTower(disks, from, to, use) {
 
 // permutation('abc') // [ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
 
-// function permutation(str, select = []) {
-//   // console.log(`str: `, str)
-//   console.log(`select: `, select)
-//   if (select.length === str.length) {
-//     console.log(`here: `, select.map(i => str[i]).join(``))
-//     return select.map(i => str[i]).join(``)
-//   }
-//
-//   let r = []
-//   for (let i = 0; i < str.length; i++) {
-//     if (select.indexOf(i) === -1) {
-//       // console.log(`select: `, select)
-//       // console.log(`before r: `, r)
-//       r = r.concat(permutation(str, select.concat(i)))
-//       // console.log(`after r: `, r)
-//     }
-//   }
-//   console.log(`===================`)
-//   return r
-// }
-//
-//
+function permutation(str, select = []) {
+  // console.log(`str: `, str)
+  console.log(`select: `, select)
+  if (select.length === str.length) {
+    console.log(`here: `, select.map(i => str[i]).join(``))
+    return select.map(i => str[i]).join(``)
+  }
+
+  let r = []
+  for (let i = 0; i < str.length; i++) {
+    if (select.indexOf(i) === -1) {
+      // console.log(`select: `, select)
+      // console.log(`before r: `, r)
+      r = r.concat(permutation(str, select.concat(i)))
+      // console.log(`after r: `, r)
+    }
+  }
+  console.log(`===================`)
+  return r
+}
+
+
 // console.log(`permutation: `, permutation('abc'))
 
 
@@ -1355,10 +1355,10 @@ function solveHanoiTower(disks, from, to, use) {
 //
 
 
-function ListNode(key) {
-  this.key = key
-  this.next = null
-}
+// function ListNode(key) {
+//   this.key = key
+//   this.next = null
+// }
 
 
 // class LinkedList {
@@ -1643,35 +1643,218 @@ function ListNode(key) {
 //
 // }
 
-function render(data) {
-  let el = document.createElement(data.tagName)
+// function render(data) {
+//   let el = document.createElement(data.tagName)
+//
+//   if(data.props){
+//     for (let k in data.props) {
+//       el.setAttribute(k, data.props[k])
+//     }
+//   }
+//
+//   data.childen.forEach(item => {
+//     let child = item.childen.length > 1 ? render(createDom(item)) : document.createTextNode(item)
+//     el.appendChild(child)
+//   })
+//
+//   console.log(`el: `, el)
+//   return el
+// }
+//
+// function createDom(data) {
+//   let el = document.createElement(data.tagName)
+//
+//   if(data.props){
+//     for (let k in data.props) {
+//       el.setAttribute(k, data.props[k])
+//     }
+//   }
+//
+//   return el
+// }
 
-  if(data.props){
-    for (let k in data.props) {
-      el.setAttribute(k, data.props[k])
-    }
-  }
 
-  data.childen.forEach(item => {
-    let child = item.childen.length > 1 ? render(createDom(item)) : document.createTextNode(item)
-    el.appendChild(child)
-  })
+solve_hanoi_tower(['i', 'j', 'k'], 'A', 'B', 'C')
+// i, j, k 代表碟子，k最小，i最大
+// A,B,C是三个位置
 
-  console.log(`el: `, el)
-  return el
+// k A->B
+// j A->C
+// k B->C
+// i A->B
+// k C->A
+// j C->B
+// k A->B
+
+function solve_hanoi_tower(disks, from, to, use) {
+  // disks, from, to, use
+
 }
 
-function createDom(data) {
-  let el = document.createElement(data.tagName)
 
-  if(data.props){
-    for (let k in data.props) {
-      el.setAttribute(k, data.props[k])
-    }
+// function moveTower(n, from, to, use) {
+//   if(n === 1) {
+//     moveDisk(from, to)
+//     return
+//   }
+//
+//
+// }
+
+
+// function permutation(s) {
+//   console.log(`s: `, s)
+// }
+//
+// console.log(`permutation: `, permutation('abc'))
+
+
+// console.log(`in: `, )
+// function binarySearch(a, x) {
+//   let l = 0
+//   let r = a.length
+//   let guess
+//
+//   while (l <= r) {
+//     guess = Math.floor((l + r) / 2)
+//     if (a[guess] === x) {
+//       return guess
+//     } else if (a[guess] < x) {
+//       l = guess + 1
+//     } else {
+//       r = guess - 1
+//     }
+//   }
+//   return -1
+// }
+//
+//
+//
+//
+// // let a = [1, 9, 20, 50, 100, 105]
+// let a = [1, 9, 20, 50, 100, 105, -100]
+// // console.log(`binarySearch(a, x): `, binarySearch(1, a, 0, a.length))
+// console.log(`binarySearch(a, x): `, binarySearch(a, 1, 0, a.length))
+
+// let a = [1, 9, 20, 50, 100, 105, -100]
+
+
+// 二分(循环 / 递归)
+// 冒泡排序
+// 插入排序
+// 快速排序
+// 合并排序
+//
+
+
+// function mergeSort(a, l, r) {
+//
+// }
+//
+// function merge(a, l, m, r) {
+//
+// }
+
+
+
+// function swap(a, i, j) {
+//   [a[i], a[j]] = [a[j], a[i]]
+// }
+//
+// function quickSort(a, l, r) {
+//
+// }
+//
+// function partition(a) {
+//
+// }
+//
+//
+// let a = [-102, 20, 10, 5, -200, 0]
+// console.log(`insertSort(a): `, quickSort(a, 0, a.length))
+
+
+
+// const a1 = [7, 6, 2, 4, 1]
+// const a2 = [9, 3, 8, 0, 5]
+
+// const a1 = [1, 2, 4, 6, 7]
+// const a2 = [0, 3, 5, 8, 9]
+// // console.log(`a1: `, a1)
+// // console.log(`a2: `, a2)
+//
+// const a = a1.concat(a2)
+//
+// function merge(A, l, m, r) {
+//   let resArr = []
+//   const a1 = A.slice(l, m)
+//   const a2 = A.slice(m, r)
+//
+//   for (let k = l, i = 0, j = 0; k < r; k++) {
+//     // console.log(`i: `, i)
+//     // console.log(`===================`)
+//     // console.log(`j: `, j)
+//     // console.log(`======================================`)
+//     console.log(`k: `, A[k])
+//     // if(a1[i] <= a2[j]){
+//     //   console.log(`a1[i]: `, a1[i])
+//     //   resArr[k] = a1[i++]
+//     // }
+//     //
+//     // if(a1[i] > a2[j]){
+//     //   console.log(`a2[j]: `, a2[j])
+//     //   resArr[k] = a2[j++]
+//     // }
+//
+//   }
+//
+//   console.log(`resArr: `, resArr)
+// }
+//
+//
+// merge(a, 0, 5, 10)
+
+
+function l(n) {
+  if(n <= 2 && n >= 0) return n
+  let a = 1
+  let b = 2
+  let tmp = 0
+
+  for (let i = 3; i <= n; i++) {
+    tmp = a + b
+    a = b
+    b = tmp
   }
-
-  return el
+  return tmp
 }
+
+console.log(`res: `, l(10))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

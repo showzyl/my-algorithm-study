@@ -16,6 +16,7 @@ function combination(S, k) {
 }
 
 const S = ['A', 'B', 'C', 'D']
+const a = []
 console.log(`combination: `, combination(S, 2))
 
 

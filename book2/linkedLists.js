@@ -12,7 +12,8 @@ class LinkedList {
     this.length = 0;
     this.head = null;
   }
-  append(element){
+
+  append(element) {
     var node = new Node(element),
       current;
     if (this.head === null) { //first node on list
@@ -29,7 +30,8 @@ class LinkedList {
     //console.log(this.head);
     this.length++; //update size of list
   }
-  toString(){
+
+  toString() {
     let current = this.head,
       string = '';
 
@@ -39,7 +41,8 @@ class LinkedList {
     }
     return string;
   }
-  print(){
+
+  print() {
     console.log(this.toString());
     //console.log(this.head, this.length);
   }

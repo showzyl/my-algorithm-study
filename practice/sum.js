@@ -8,30 +8,57 @@
 
 'use strict'
 
-
-/*
-给定一个整数数组和一个目标值，找出数组中和为目标值的两个数。
-你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。
-
-示例:
-  给定 nums = [2, 7, 11, 15], target = 9
-
-因为 nums[0] + nums[1] = 2 + 7 = 9
-所以返回 [0, 1]
-*/
-
-function twoSum(nums, target) {
-  for (let i = nums.length - 1; i >= 1; i--) {
-    for (let j = 1; j <= i; j++) {
-      if (nums[j - 1] + nums[j] === target) {
-        return [j - 1, j]
-      }
-    }
-  }
-}
-
-console.log(`twoSum: `, twoSum([2, 7, 11, 15], 9))
+// 循环和递归方式实现`sum`函数
 
 
+// function sum(n) {
+//   let i = 0
+//   let r = 0
+//   while (i <= n){
+//     r += i
+//     i++
+//   }
+//   return r
+// }
 
+
+// function sum(n) {
+//   return Array(n).fill(0).reduce((cur, pre, i, a) => cur + (i+1)) + 1
+// }
+
+
+// function sum(n) {
+//   let r = 0
+//   for (let i = 0; i <= n; i++) {
+//     r += i
+//   }
+//   return r
+// }
+
+// function sum(n, r = n, i = n) {
+//   if(i === 1) return r
+//   return sum(n, r += (--i), i)
+// }
+
+// function sum(n, r = 0, i = 0) {
+//   console.log(`r: `, r)
+//   if(i === n) return r
+//   return sum(n, r += (++i), i)
+// }
+
+// function sum(n, i = 0) {
+//   console.log(`i: `, i)
+//   let r = []
+//   if (i < n) {
+//     r = r.concat(sum(n, ++i))
+//   }
+//   return r
+// }
+//
+// console.log(`sum: `, sum(4))
+
+
+
+
+console.log(`sum(n): `, sum(4))
 

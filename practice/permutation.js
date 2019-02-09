@@ -18,4 +18,4 @@ function permutation(str, select = []) {
   return r
 }
 
-console.log(`permutation: `, permutation('abc'))
+console.log(`permutation: `, permutation('abcde').length)

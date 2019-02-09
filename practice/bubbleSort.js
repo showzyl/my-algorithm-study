@@ -15,15 +15,11 @@
  */
 function bubbleSort(arr) {
   for (let i = arr.length - 1; i >= 1; i--) {
-    console.log(`i: `, i)
-    console.log(`=====================`)
     for (let j = 1; j <= i; j++) {
-      console.log(`j: `, j)
       if (arr[j - 1] > arr[j]) {
         swap(arr, j - 1, j)
       }
     }
-    console.log(`=====================`)
   }
   return arr
 }
