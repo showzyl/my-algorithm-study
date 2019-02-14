@@ -4,12 +4,13 @@
 
 
 const maxProfit = function (prices) {
+  let res = 0
   return prices.reduce((acc, item, i, arr) => {
     if (arr[i + 1] > item) {
       acc = acc + arr[i + 1] - item
     }
     return acc
-  }, 0)
+  }, res)
 };
 
 console.log(`re: `, maxProfit([7, 1, 5, 3, 6, 4]))
