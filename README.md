@@ -33,17 +33,21 @@ AVL树/红黑树
 - 冒泡排序 O(n²)
 
 ```
-
 function bubbleSort(arr) {
-  for(let i=0;i<arr.length;i++){
-    for(let j=0;j<arr.length;j++){
-      if(arr[j] > arr[i]){
-        let tmp = arr[i]
-        arr[i] = arr[j]
-        arr[j] = tmp
+  for (let i = arr.length - 1; i >= 1; i--) {
+    for (let j = 1; j < i; j++) {
+      if(arr[j - 1] > arr[j]){
+        swap(arr, j - 1, j)
       }
     }
   }
+  return arr
+}
+
+function swap(arr, i, j){
+  let tmp = arr[i]
+  arr[i] = arr[j]
+  arr[j] = tmp
 }
 ```
 
