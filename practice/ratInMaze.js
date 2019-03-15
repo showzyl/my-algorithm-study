@@ -30,9 +30,8 @@ function ratInMaze(
   transverse = []) {
 
   const [x, y] = pos
-  if (maze[x][y] === 2) { // 基础条件
-    return path
-  }
+  // 基础条件
+  if (maze[x][y] === 2) return path
   // 记录走过当前位置
   transverse[x * maze.length + y] = 1
 
