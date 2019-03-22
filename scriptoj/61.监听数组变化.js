@@ -11,18 +11,12 @@
 
 "use strict"
 
-function ObserverableArray(...q) {
-  // console.log(`q: `, q)
-  const arrMethodsName = ['push', 'pop', 'shift', 'unshift', 'splice', 'sort', 'reverse']
-  return new Proxy([...q], {
-    get(target, property){
-      if(arrMethodsName.includes(property)){
-        return function (...p){
-          // console.log(property);
-          console.log(`p: `, p);
-          return target[property].apply(this, p);
-        }
-      }
+function ObserverableArray() {
+  return new Proxy([], {
+    get(target, propKey) {
+      const matArr = ['push', 'pop', 'shift', 'unshift', 'splice', 'sort', 'reverse'];
+      matArr.indexOf(propKey) > -1 && console.log(propKey);
+      return target[propKey]
     }
   })
 }
