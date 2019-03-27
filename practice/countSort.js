@@ -20,8 +20,6 @@ function countSort(A) {
   // 累计位递增
   A.forEach((_, i) => B[A[i]]++)
 
-  console.log(`B: `, B)
-
   // 累计求和
   for (let i = 1; i < B.length; i++) {
     B[i] = B[i-1] + B[i]
@@ -39,7 +37,7 @@ function countSort(A) {
 
 
 // console.log(`countSort: `, countSort([5,4,3,2,1]))
-console.log(`countSort: `, countSort([8,3,2,5,4]))
+console.log(`countSort: `, countSort([8,3,3,2,5,4]))
 
 
 
