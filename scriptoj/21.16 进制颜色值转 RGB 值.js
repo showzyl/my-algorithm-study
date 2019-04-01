@@ -57,6 +57,7 @@ console.log(`res3: `, RGBToHex('rgb(108, 74, 7)'))
 
 
 
+
 // const RGBToHex = (rgb) => {
 //   const regx = /^rgb\(\d+(,\s*\d+){2}\)$/g;
 //   if(!regx.test(rgb)) return null;
