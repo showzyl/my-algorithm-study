@@ -29,14 +29,29 @@
 //
 // console.log(`fibonacci(10): `, fibonacci(6))
 
+// const fibonacci = (n) => {
+//   const fib = (prev, next, count) => {
+//     if (count === 0) {
+//       return prev
+//     } else {
+//       console.log(`p1: `, next)
+//       console.log(`p2: `, prev + next)
+//       console.log(`count: `, count)
+//       console.log(`==========================================`)
+//       return fib(next, prev + next, count - 1)
+//     }
+//   }
+//   return fib(0, 1, n)
+// }
 
-// 尾递归
+
+// // 尾递归
 function fibonacci(n, n1, n2) {
   if (n === 0) return n1
   return fibonacci(n - 1, n2, n1 + n2)
 }
 
-console.log(`fibonacci(10): `, fibonacci(3, 0, 1))
+console.log(`fibonacci(10): `, fibonacci(6, 0, 1))
 
 // 3
 // f(2, 1, 1)
