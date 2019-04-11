@@ -12,13 +12,6 @@
 // 比如数组: A=3,5,7,13,22,25
 
 
-// bsearch(A,5) // 1
-// bsearch(A,13) // 3
-// bsearch(A,4) // 1
-// bsearch(-1) // 0
-// bsearch(-10000) // 0
-// bsearch(30) // 6
-
 function bSearch(A, x) {
   let l = 0
   let r = A.length - 1
