@@ -8,7 +8,35 @@
 // sequence( n => n * 4 ).takeWhile( n => n < 20 ) // [0, 4, 8, 12, 16]
 
 
+function sequence(cb) {
+  console.log(`cb: `, cb)
+  let resArr = []
+  return {
+    take(number) {
+      let i = 0
+      while (i < number) {
+        resArr.push(cb(i++))
+      }
+      return resArr
+    },
+    takeWhile(fn) {
+      let i = 0
+      let tmp = 0
+      while (true) {
+        tmp = cb(i++)
+        if (fn(tmp)) {
+          // tmp = cb(i++)
+          resArr.push(tmp)
+        } else {
+          return resArr
+        }
+      }
+      // return resArr
+    }
+  }
+}
 
-
+// console.log(`res1: `, sequence(n => n * n).take(5))
+console.log(`res2: `, sequence(n => n * 4).takeWhile(n => n < 20))
 
 
