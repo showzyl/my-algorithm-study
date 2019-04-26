@@ -7,19 +7,26 @@
 // // 注: low=10 high = 15
 //
 // find_missing([1, 14, 11, 51, 15],50, 55) // [50, 52, 53, 54]
-// // 注：low = 50, hight = 55
+// // 注：low = 50, high = 55
 
 
 function find_missing(A, low, high) {
-  const B = A.filter(x => x >= low && x < high).sort((x, y) => x - y)
-  console.log(`B: `, B)
-  let res = [...Array(high - low)].map((_, i) => i + low)
-
-  console.log(`res: `, res)
-  // i + low
-  // })
-  // console.log(`Array.from(low): `)
+  let allArr = [...Array(high - low)].map((_, i) => low + i)
+  let tmpSet = new Set(A)
+  return [...new Set(allArr.filter(x => !tmpSet.has(x)))]
 }
+
+
+// function find_missing(A, low, high) {
+//   const B = A.filter(x => x >= low && x < high).sort((x, y) => x - y)
+//   console.log(`B: `, B)
+//   let res = [...Array(high - low)].map((_, i) => i + low)
+//
+//   console.log(`res: `, res)
+//   // i + low
+//   // })
+//   // console.log(`Array.from(low): `)
+// }
 
 
 // function find_missing(A, low, high) {
@@ -35,7 +42,7 @@ function find_missing(A, low, high) {
 //   return resArr
 // }
 
-console.log(`res1: `, find_missing([10, 12, 11, 15], 10, 15)) // [13,14]
-// console.log(`res2: `, find_missing([1, 14, 11, 51, 15],50, 55)) // [50, 52, 53, 54]
+// console.log(`res1: `, find_missing([10, 12, 11, 15], 10, 15)) // [13,14]
+console.log(`res2: `, find_missing([1, 14, 11, 51, 15],50, 55)) // [50, 52, 53, 54]
 
 
