@@ -24,6 +24,7 @@ function deepSet(o, path, value) {
   o[path[i]] = decodeURIComponent(value)
 }
 
+
 console.log(`re1: `, parse('a=1&b=&c=5&f=hello'))
 console.log(`re2: `, parse('a&b&c'))
 console.log(`re3: `, parse('a[name]=fox&a[company]=tecent&b=why'))
