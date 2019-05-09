@@ -4,7 +4,7 @@
 // 返回一个长度为 n 的数组，数组中每个元素的值等于它的下标。arrWithoutLoop 中不能使用循环控制结构。
 
 const arrWithoutLoop = (n) => {
-  return Array(n).fill(0).map((item, i) => i )
+  return [...Array(n)].map((item, i) => i )
 }
 
 console.log(`res: `, arrWithoutLoop(10))

@@ -9,7 +9,7 @@
 /**
  * 计数排序
  * @param A
- * @returns {any[]}
+ * @returns []
  */
 function countSort(A) {
   const max = Math.max(...A)
@@ -22,13 +22,15 @@ function countSort(A) {
 
   // 累计求和
   for (let i = 1; i < B.length; i++) {
-    B[i] = B[i-1] + B[i]
+    B[i] = B[i - 1] + B[i]
   }
   console.log(`B: `, B)
+
   // 结果取出
   for (let i = 0; i < A.length; i++) {
     const p = B[A[i]] - 1 // 回写位置
     B[A[i]]-- // 新回写位置
+    console.log(`C: `, C)
     C[p] = A[i] // 回写结果
   }
   console.log(`B: `, B)
@@ -37,7 +39,8 @@ function countSort(A) {
 
 
 // console.log(`countSort: `, countSort([5,4,3,2,1]))
-console.log(`countSort: `, countSort([8,3,3,2,5,4]))
+// console.log(`countSort: `, countSort([8,3,3,2,5,4]))
+console.log(`countSort: `, countSort([2, 1, 5]))
 
 
 

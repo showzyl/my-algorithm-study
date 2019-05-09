@@ -9,7 +9,7 @@
 /**
  * 基数排序 radix
  * @param A
- * @returns {any[]}
+ * @returns []
  */
 function radixSort(A) {
   const max = Math.max(...A)
