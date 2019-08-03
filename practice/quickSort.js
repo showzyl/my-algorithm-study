@@ -31,8 +31,8 @@ function partition(A, l, r) {
 }
 
 function quickSort(A, l = 0, r = A.length) {
-  console.log(`l: `, l)
-  console.log(`r: `, r)
+  // console.log(`l: `, l)
+  // console.log(`r: `, r)
   if (r - l <= 1) return
   const p = partition(A, l, r)
   quickSort(A, l, p)
